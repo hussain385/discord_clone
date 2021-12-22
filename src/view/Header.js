@@ -35,7 +35,12 @@ function Header() {
         <a className="link">Support</a>
       </div>
       <div className="flex">
-        <button onClick={!user ? signIn : () => navigate("/channels")}>Login</button>
+        <button
+          className="bg-white p-2 rounded-full text-xs md:text-sm px-4 focus:outline-none hover:shadow-2xl hover:text-discord_blue transition duration-200 ease-in-out whitespace-nowrap font-medium"
+          onClick={!user ? signIn : () => navigate("/channels")}
+        >
+          {!user ? "Login" : "Open Discord"}
+        </button>
       </div>
     </header>
   );
