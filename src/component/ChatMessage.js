@@ -4,7 +4,7 @@ import { auth } from "../component/firebase";
 const ChatMessage = (props) => {
   const { text, uid, photoURL } = props.messages;
   return (
-    <div className={`${uid === auth ? "send" : "rececived"}`}>
+    <div className="flex flex-row">
       <img src={photoURL} />
       <p>{text}</p>
     </div>
